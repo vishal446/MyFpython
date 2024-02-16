@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+import numpy as np
+company=(["microsoft","google","softpro","techsrijan"])
+revenue=([800,1500,600,1200])
+profit=([100,1400,300,1000])
+# plt.bar(company,revenue,label='revnue',color='blue')
+# plt.bar(company,profit,label='profit',color='red')
+xpos= np.arange(len(company))
+# print(xpos)
+plt.bar(xpos-0.2,revenue,label='revenue',width=0.4)
+plt.bar(xpos+0.2,profit,label='profit', width=0.4)
+plt.xticks(xpos,company)
+plt.legend()
+plt.xlabel("Company")
+plt.ylabel("Revenue in million")
+plt.title("Companies Revenues")
+plt.savefig("BarGraph.png")
+plt.show()
